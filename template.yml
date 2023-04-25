@@ -1,0 +1,82 @@
+Transform: 'AWS::Serverless-2016-10-31'
+
+Description: |
+  SAM Template for a Lambda handler that handles HTTP requests as part
+  of a Slack App integration that responds to user's message with OpenAI's chat completion model.
+
+Parameters:
+  FunctionName:
+    Type: String
+    Description: Name of the Lambda function
+    Default: chatgpt-faq-slack-bot
+  OpenaiApiKey:
+    Type: String
+    Description: OpenAI API key
+    NoEcho: true
+  PythonRunTime:
+    Type: String
+    Description: Python runtime version
+    Default: python3.9
+  SlackBotToken:
+    Type: String
+    Description: Slack API token of your App, refer to "Installed App" settings, "Bot User OAuth Token" field.
+    NoEcho: true
+  SlackSigningSecret:
+    Type: String
+    Description: Signing secret of your Slack App, refer to "Basic Information" settings, "App Credentials" > "Signing Secret"
+    NoEcho: true
+
+Resources:
+  Function:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: !Ref FunctionName
+      Description: |
+        Lambda function that acts as handler for Slack App event subscriptions
+      Runtime: !Ref PythonRunTime
+      CodeUri: ./function
+      Handler: lambda_function.lambda_handler
+      # FIXME: Move to AWS Secrets Manager instead
+      Environment:
+        Variables:
+          OPENAI_API_KEY: !Ref OpenaiApiKey
+          SLACK_BOT_TOKEN: !Ref SlackBotToken
+          SLACK_SIGNING_SECRET: !Ref SlackSigningSecret
+          DATAFILE_S3_BUCKET: !Ref DataBucket
+      Layers:
+        - !Ref PythonLayer
+      MemorySize: 1024
+      Timeout: 15
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      AutoPublishAlias: live
+      FunctionUrlConfig:
+        AuthType: NONE
+        InvokeMode: BUFFERED
+      # Ref: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-policy-templates.html
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref DataBucket
+  PythonLayer:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      LayerName: !Sub '${FunctionName}-layer'
+      Description: !Sub 'Lambda layer for ${FunctionName}'
+      ContentUri: ./layer
+      CompatibleRuntimes:
+        - !Ref PythonRunTime
+    Metadata:
+      BuildMethod: !Ref PythonRunTime
+  DataBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub '${FunctionName}-data'
+      AccessControl: Private
+      VersioningConfiguration:
+        Status: Enabled
+
+Outputs:
+  FunctionUrlEndpoint:
+    Description: 'Lambda Function URL Endpoint'
+    Value:
+      Fn::GetAtt: FunctionUrl.FunctionUrl
