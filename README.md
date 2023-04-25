@@ -26,7 +26,7 @@ And now the bot knows how to answer my question:
 
 ## Background
 
-Since ChatGPT's API is available in 2023 Mar, the world has been of great hype on building a lot of greate integrations around it. Two of these integrations are especially appealing to me:
+Since ChatGPT's API became available in 2023 Mar, the world has been of great hype on building a lot of great integrations around it. Two of these integrations are especially appealing to me:
 
 1. [Combing Embedding Search with ChatGPT](https://github.com/openai/openai-cookbook/blob/main/examples/Question_answering_using_embeddings.ipynb) to build a FAQ engine - it's a way of:
 [Knowledge Base Question Answering (KBQA)](https://arxiv.org/pdf/2108.06688.pdf) - combining
