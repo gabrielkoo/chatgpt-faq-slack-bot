@@ -7,7 +7,7 @@
 ![](https://img.shields.io/badge/OpenAI-412991.svg?&logo=OpenAI&logoColor=white)
 ![](https://img.shields.io/badge/Slack-4A154B.svg?&logo=Slack&logoColor=white)
 
-Read my [dev.to](dev.to) article below to know more about why and how I created this solution!
+Read my [dev.to](https://dev.to) article below to know more about why and how I created this solution!
 
 I have also included a pricing estimate on the cost breakdown of using this solution (it's at US$0.009 per question as of Apr 2023 pricings).
 
