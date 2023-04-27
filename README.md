@@ -1,5 +1,18 @@
 # chatgpt-faq-slack-bot
 
+![](https://img.shields.io/badge/Python-3776AB.svg?&logo=Python&logoColor=white)
+![](https://img.shields.io/badge/Serverless-FD5750.svg?&logo=Serverless&logoColor=white)
+![](https://img.shields.io/badge/AWS%20Lambda-FF9900.svg?&logo=AWS-Lambda&logoColor=white)
+![](https://img.shields.io/badge/Amazon%20S3-569A31.svg?&logo=Amazon-S3&logoColor=white)
+![](https://img.shields.io/badge/OpenAI-412991.svg?&logo=OpenAI&logoColor=white)
+![](https://img.shields.io/badge/Slack-4A154B.svg?&logo=Slack&logoColor=white)
+
+Read my [dev.to](dev.to) article below to know more about why and how I created this solution!
+
+I have also included a pricing estimate on the cost breakdown of using this solution (it's at US$0.009 per question as of Apr 2023 pricings).
+
+https://dev.to/aws-builders/enhance-your-slack-workspace-with-a-user-trainable-chatgpt-integrated-faq-bot-2pj3
+
 ## What does this Bot do?
 
 This is a Slack bot that you can easily deploy onto AWS and integrate into your Slack workspace.
@@ -55,6 +68,8 @@ The infrastructure is built with AWS SAM, and it consists of the following compo
 - A AWS S3 bucket to store the datafiles, that includes a CSV file of the articles, and a CSV file of the document embeddings.
 
 Yeah that's it! With [AWS SAM](https://aws.amazon.com/serverless/sam/), things are simply so simple, and all these are defined in `template.yml`.
+
+![Architecture Diagram](docs/architecture-diagram.jpg)
 
 Sequence diagram for the Q&A flow:
 
