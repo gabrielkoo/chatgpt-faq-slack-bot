@@ -7,19 +7,13 @@
 ![](https://img.shields.io/badge/OpenAI-412991.svg?&logo=OpenAI&logoColor=white)
 ![](https://img.shields.io/badge/Slack-4A154B.svg?&logo=Slack&logoColor=white)
 
+The bot uses ChatGPT to answer based on your own FAQ database, while allowing users to submit new articles into it with a [Slash Command](https://slack.com/help/articles/201259356-Slash-commands-in-Slack), so that it can answer with new knowledge **immediately**, as it updates the model **on the fly in the cloud**!
+
 Read my [dev.to](https://dev.to) article below to know more about why and how I created this solution!
 
 I have also included a pricing estimate on the cost breakdown of using this solution (it's at US$0.009 per question as of Apr 2023 pricings).
 
 https://dev.to/aws-builders/enhance-your-slack-workspace-with-a-user-trainable-chatgpt-integrated-faq-bot-2pj3
-
-## What does this Bot do?
-
-This is a Slack bot that you can easily deploy onto AWS and integrate into your Slack workspace.
-
-It answers questions based on a FAQ dataset, and it's powered by OpenAI's [ChatGPT](https://openai.com/blog/chatgpt) and [Embeddings](https://platform.openai.com/docs/guides/embeddings).
-
-When your users found some topic that the bot is not able to answer, they can submit a new article to the bot via a [Slash Command](https://slack.com/help/articles/201259356-Slash-commands-in-Slack), and the bot will learn from the new article and be able to answer the question next time.
 
 ## Example
 
