@@ -1,0 +1,22 @@
+version: 2
+
+updates:
+  - package-ecosystem: "pip"
+    directory: "/layer/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    commit-message:
+      prefix: ":arrow_up:"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "all"
+    commit-message:
+      prefix: ":arrow_up:"
+    open-pull-requests-limit: 10
