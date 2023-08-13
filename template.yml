@@ -47,6 +47,8 @@ Resources:
         - !Ref PythonLayer
       MemorySize: 1024
       Timeout: 15
+      Architectures:
+        - x86_64
       Policies:
         - AWSLambdaBasicExecutionRole
       AutoPublishAlias: live
