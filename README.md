@@ -163,7 +163,7 @@ Prepare the following environment varaibles into the `.env` file
 1. Setup your shell for AWS credentials. There are various ways of doing so, and you may refer to [this documnetation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-authentication.html).
 
    For example, you may run `aws sso login --profile name-of-your-profile` if you have configured your AWS credentials with AWS Identity Center (originally named AWS SSO) before.
-2. Run the `./build.sh` script, it will provision everything for you.
+2. Run the `./deploy.sh` script, it will provision everything for you.
 
 After the deployment, you still need to manually upload the initial datafiles.
 
@@ -188,7 +188,7 @@ After the deployment, you still need to manually upload the initial datafiles.
   If you want to use the command line, you can run the following command:
 
   ```bash
-  aws s3 cp --recursive ./function/data s3://$DATAFILE_S3_BUCKET/data/
+  aws s3 cp --recursive ./function/data/*.csv s3://$DATAFILE_S3_BUCKET/data/
   ```
 
 That's it!
@@ -196,7 +196,7 @@ That's it!
 If you want to be a bit lazy and start with my sample data, just run the following command instead
 
 ```bash
-aws s3 cp --recursive ./sample_data s3://$DATAFILE_S3_BUCKET/data/
+aws s3 cp --recursive ./sample_data/*.csv s3://$DATAFILE_S3_BUCKET/data/
 ```
 
 ## Making Everything End-to-End
