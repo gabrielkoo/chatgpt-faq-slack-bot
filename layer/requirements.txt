@@ -1,4 +1,4 @@
-openai==0.27.8
+openai==0.28.0
 pandas==2.0.3
 slack_bolt==1.18.0
 slack_sdk
