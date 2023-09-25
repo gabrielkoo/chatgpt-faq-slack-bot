@@ -1,5 +1,5 @@
 openai==0.27.8
-pandas==2.0.3
+pandas==2.1.1
 slack_bolt==1.18.0
 slack_sdk
 tiktoken==0.4.0
