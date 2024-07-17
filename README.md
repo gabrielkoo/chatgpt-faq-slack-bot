@@ -7,6 +7,10 @@
 ![](https://img.shields.io/badge/OpenAI-412991.svg?&logo=OpenAI&logoColor=white)
 ![](https://img.shields.io/badge/Slack-4A154B.svg?&logo=Slack&logoColor=white)
 
+**UPDATE [2024-07-17]**: I have created another repo with similar functionality but with all AWS services only. Though it requires more experience on e.g. AWS VPC and Amazon Aurora's query editor, but it should be more robust and scalable than the solution in this repo. Do take a look! [gabrielkoo/self-learning-rag-it-support-slackbot](https://github.com/gabrielkoo/self-learning-rag-it-support-slackbot).
+
+---
+
 The bot uses ChatGPT to answer based on your own FAQ database, while allowing users to submit new articles into it with a [Slash Command](https://slack.com/help/articles/201259356-Slash-commands-in-Slack), so that it can answer with new knowledge **immediately**, as it updates the model **on the fly in the cloud**!
 
 Read my [dev.to](https://dev.to) article below to know more about why and how I created this solution!
