@@ -21,6 +21,9 @@ I have also included a pricing estimate on the cost breakdown of using this solu
 
 https://dev.to/aws-builders/enhance-your-slack-workspace-with-a-user-trainable-chatgpt-integrated-faq-bot-2pj3
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=gabrielkoo/chatgpt-faq-slack-bot@github)](https://gitads.dev/v1/ad-track?source=gabrielkoo/chatgpt-faq-slack-bot@github)
+
 ## Example
 
 A sample dataset is included in the `./sample_data` directory, and it's built based on Wikipedia pages on the Disney+ series "The Mandalorian".
