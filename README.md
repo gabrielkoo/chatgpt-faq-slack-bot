@@ -7,6 +7,8 @@
 ![](https://img.shields.io/badge/OpenAI-412991.svg?&logo=OpenAI&logoColor=white)
 ![](https://img.shields.io/badge/Slack-4A154B.svg?&logo=Slack&logoColor=white)
 
+<!-- GitAds-Verify: VKX6LQT126SMYIM4S794ZKV5VQ9C1NHN -->
+
 **UPDATE [2024-07-17]**: I have created another repo with similar functionality but with all AWS services only. Though it requires more experience on e.g. AWS VPC and Amazon Aurora's query editor, but it should be more robust and scalable than the solution in this repo. Do take a look! [gabrielkoo/self-learning-rag-it-support-slackbot](https://github.com/gabrielkoo/self-learning-rag-it-support-slackbot).
 
 ---
